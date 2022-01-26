@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Moment1._2</title>
+
+    <link rel="stylesheet" href="~/css/config.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/razor.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+
+</head>
+@{
+    var todaysDate = DateTime.Now.ToString("yyyy-MM-dd");
+
+}
+
+<body>
+    <header>
+        @* Navbar *@
+        <div class="container">
+
+            <nav>
+                <strong>LOGO</strong>
+                <b>Dagens datum är: @todaysDate</b>
+
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main">
+            @* Navigation *@
+            <aside>
+                <ul id="navbar">
+                    <li><a class="navEl "  href="../index">Home</a></li>
+                    <li><a class="navEl " href="../Razor/Razor">Razor</a></li>
+                    <li><a class="navEl " href="../About/About">Om</a></li>
+                </ul>
+            </aside>
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <div class="footerText">
+            Av Nick Kushkbaghi- Kontakta mig via  <a asp-area="" asp-page="/About/Privacy">Om</a>
+        </div>
+    </footer>
+    <script src="~/js/index.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

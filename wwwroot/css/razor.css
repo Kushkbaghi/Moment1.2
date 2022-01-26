@@ -1,0 +1,13 @@
+.title2 {
+  font-size: 2rem;
+}
+i b {
+  color: gray;
+  font-weight: 100;
+}
+
+.course {
+  margin-left: 5%;
+  font-size: 1.5rem;
+  list-style-type: circle;
+}
