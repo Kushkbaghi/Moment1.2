@@ -52,7 +52,7 @@ footer {
 }
 .footerText {
   max-width: 96rem;
-  width: 80%;
+  width: 50rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
